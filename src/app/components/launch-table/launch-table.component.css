@@ -1,0 +1,23 @@
+.launch-table__heading-row {
+    border: 3px solid lightgrey;
+    height: 10%;
+    margin: 0 10%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.sort-arrow {
+    margin-right: .25rem;
+    width: 2rem;
+    height: 100%;
+    text-align: center;
+    border: 1px solid darkgrey;
+    line-height: 100%;
+}
+
+.invert {
+    transform: rotate(180deg);
+}

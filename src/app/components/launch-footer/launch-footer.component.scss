@@ -1,0 +1,45 @@
+.launch-table__footer {
+    width: 80%;
+    margin: 0 10%;
+}
+
+.footer__button-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.footer__page-button {
+    height: 50px;
+    min-width: 50px;
+    border: 1px solid lightgrey;
+    line-height: 50px;
+    text-align: center;
+    padding: 0 .5rem;
+}
+
+.footer__page-button:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.footer__page-button.disable {
+    color: lightgrey;
+}
+
+.footer__page-button.disable:hover {
+    background-color: white;
+    cursor: default;
+}
+
+.footer__page-button .arrows {
+    font-size: 2rem;
+    line-height: normal;
+    vertical-align: -3px;
+}
+
+.footer__page-button.active {
+    background-color: darkgrey;
+    color: white;
+}

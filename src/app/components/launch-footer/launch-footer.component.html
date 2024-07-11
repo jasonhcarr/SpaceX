@@ -1,0 +1,9 @@
+<div class='launch-table__footer'>
+    <ul class='footer__button-list'>
+        <li (click)='prevPage()' class='footer__page-button' [class.disable]='currentPage === 1'><span class='arrows'>« </span>Prev</li>
+        <li *ngFor='let n of pageRange' [class.active]='currentPage === n' (click)='setPage(n)' class='footer__page-button'>{{
+            n }}</li>
+        <li (click)='nextPage()' class='footer__page-button' [class.disable]='currentPage === numOfPages'>Next <span class='arrows'>
+            »</span></li>
+    </ul>
+</div>
