@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ILaunch } from '../../interfaces/launch';
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LaunchService {
 

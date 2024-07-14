@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.launch-table__cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .25rem;
+}
+
+.launch-table__cell.small {
+	border-right: 3px solid lightgrey;
+	width: 11%;
+}
+
+.launch-table__cell.large {
+	width: 67%;
+}
