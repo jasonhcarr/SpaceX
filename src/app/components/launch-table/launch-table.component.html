@@ -1,18 +1,19 @@
 <table>
-    <tr class='launch-table__heading-row'>
-        <th class='launch-table__cell small' (click)='sortTable("flight_number")'>
-            Flight Number<span class='sort-arrow' [class.invert]='!ascending'>^</span>
-        </th>
-        <th class='launch-table__cell small' (click)='sortTable("launch_date_unix")'>
-            Launch Year
-        </th>
-        <th class='launch-table__cell small'>
-            Rocket Name
-        </th>
-        <th class='launch-table__cell large'>
-            Details
-        </th>
-    </tr>
-    <app-launch-row *ngFor='let launch of displayLaunches[currentIndex]' [launch]='launch'></app-launch-row>
-    <app-launch-footer *ngIf='displayLaunches.length' [numOfPages]='displayLaunches.length' (pageEvent)='receiveIndex($event)'></app-launch-footer>
+	<tr class='launch-table__heading-row'>
+		<th class='launch-table__cell small' (click)='sortTable("flight_number")'>
+			Flight Number<span class='sort-arrow' [class.invert]='!ascending'>^</span>
+		</th>
+		<th class='launch-table__cell small' (click)='sortTable("date_unix")'>
+			Launch Year
+		</th>
+		<th class='launch-table__cell small'>
+			Rocket Name
+		</th>
+		<th class='launch-table__cell large'>
+			Details
+		</th>
+	</tr>
+	<app-launch-row *ngFor='let launch of displayLaunches[currentIndex]' [launch]='launch'></app-launch-row>
+	<app-launch-footer *ngIf='displayLaunches.length' [numOfPages]='displayLaunches.length'
+		(pageEvent)='receiveIndex($event)'></app-launch-footer>
 </table>

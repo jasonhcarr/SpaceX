@@ -9,7 +9,7 @@ export class LaunchService {
 
 	constructor(private http: HttpClient) { }
 
-	launchScheduleUrl = 'https://api.spacexdata.com/v2/launches/all';
+	launchScheduleUrl = 'https://api.spacexdata.com/v5/launches';
 
 	getLaunches = () => this.http.get<ILaunch[]>(this.launchScheduleUrl);
 }

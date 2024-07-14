@@ -40,7 +40,10 @@ export class LaunchTableComponent implements OnInit {
 	ngOnInit () {
 		this.launchService.getLaunches()
 			.subscribe((data: ILaunch[]) => {
-				this.allLaunches = data;
+				this.allLaunches = data.map((launch: ILaunch) => ({
+					...launch,
+					launch_year: launch.date_utc.split('-')[0],
+				}));
 				this.paginate();
 			});
 	}

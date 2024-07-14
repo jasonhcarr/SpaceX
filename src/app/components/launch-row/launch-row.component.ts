@@ -17,14 +17,13 @@ export class LaunchRowComponent implements OnInit {
 
 	/**
 	 * Sets the link property to the press kit link.
-	 * The requirements did not expressly state what to do in the event there was no press kit link.
-	 * A default has set here to link to the article link.
+	 * A fallback has set here to link to the article link.
 	 * And in the event that does not exist to the wikipedia article.
 	 * This ensures that almost all rows have a valid link to go to.
 	 */
 	ngOnInit () {
 		const launch = this.launch;
-		this.link = launch.links.presskit || launch.links.article_link || launch.links.wikipedia;
+		this.link = launch.links.presskit || launch.links.article || launch.links.wikipedia;
 	}
 
 	/**
