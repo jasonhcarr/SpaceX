@@ -3,15 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { ILaunch } from '../../interfaces/launch';
 
 @Injectable({
-  providedIn: 'root',
+	providedIn: 'root',
 })
 export class LaunchService {
 
-  constructor(private http: HttpClient) { }
+	constructor(private http: HttpClient) { }
 
-  launchScheduleUrl = 'https://api.spacexdata.com/v2/launches/all';
+	launchScheduleUrl = 'https://api.spacexdata.com/v2/launches/all';
 
-  getLaunches = () => {
-    return this.http.get<ILaunch[]>(this.launchScheduleUrl);
-  }
+	getLaunches = () => this.http.get<ILaunch[]>(this.launchScheduleUrl);
 }

@@ -8,13 +8,13 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding: .25rem;
-}
 
-.launch-table__cell.small {
-	border-right: 3px solid lightgrey;
-	width: 11%;
-}
+	&.small {
+		border-right: 3px solid lightgrey;
+		width: 11%;
+	}
 
-.launch-table__cell.large {
-	width: 67%;
+	&.large {
+		width: 67%;
+	}
 }
