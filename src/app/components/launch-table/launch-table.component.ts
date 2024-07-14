@@ -35,7 +35,8 @@ export class LaunchTableComponent implements OnInit {
 	constructor(private launchService: LaunchService) { }
 
 	/**
-	 * Subscribes to the launch service and receives and array of launch data. 
+	 * Subscribes to the launch service, receives an array of launch data, and
+	 * maps `launch_year` property onto response. 
 	 */
 	ngOnInit () {
 		this.launchService.getLaunches()
